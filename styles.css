@@ -1,41 +1,47 @@
-/* Sample website styles */
-* {
-	box-sizing: border-box;
-}
+/* 
+
+This is a comment! This border was made by W3 Schools ! 
+
+*/
 
 body {
-	margin: 0;
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	color: #222;
-	background: #f4f7fb;
+	background-color: #2df0af;
 }
 
-header {
-	padding: 2rem;
+h1 {
 	text-align: center;
-	color: white;
-	background: #2563eb;
+	background-color: #cb904d;
+	font-family: 'Grenze', 'Times New Roman', Times, serif;
+	font-size: 3.50em;
 }
 
-main {
-	width: min(90%, 900px);
-	margin: 2rem auto;
-	padding: 2rem;
-	background: white;
-	border-radius: 12px;
-	box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+p {
+	font-family: 'Fjalla One', 'Times New Roman', serif;
+	font-size: 1.50em;
+	text-decoration-color: #6096ba;
 }
 
-button {
-	padding: 0.7rem 1.2rem;
-	color: white;
-	background: #16a34a;
-	border: 0;
-	border-radius: 6px;
-	cursor: pointer;
+a {
+	font-family: 'Fjalla One';
+	font-size: 1.5em;
 }
 
-button:hover {
-	background: #15803d;
+.imgbord {
+	border: 5px;
+	border-style: dotted;
+	border-color: #42253b;
+	border-radius: 10px;
+}
+
+.widthSm {
+	width: 30%;
+	float: left;
+}
+
+.leftAlign{
+	float: left;
+}
+
+.rightAlign{
+	float: right;
 }
