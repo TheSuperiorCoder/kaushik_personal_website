@@ -4,8 +4,35 @@ This is a comment! This border was made by W3 Schools !
 
 */
 
+
 body {
 	background-color: #2df0af;
+}
+
+nav {
+	background-color: #74226c;
+	text-decoration-color: #ffffff;
+	border: 2px;
+	border-style: solid;
+	align-items: stretch;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+	float: left;
+}
+
+ul li a {
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 
 h1 {
@@ -13,6 +40,12 @@ h1 {
 	background-color: #cb904d;
 	font-family: 'Grenze', 'Times New Roman', Times, serif;
 	font-size: 3.50em;
+}
+
+h2 {
+	text-align: left;
+	font-family: 'Grenze', 'Times New Roman', Times, serif;
+	font-size: 2.50em;
 }
 
 p {
@@ -23,7 +56,7 @@ p {
 
 a {
 	font-family: 'Fjalla One';
-	font-size: 1.5em;
+	font-size: 1.0em;
 }
 
 .imgbord {
@@ -35,7 +68,10 @@ a {
 
 .widthSm {
 	width: 30%;
-	float: left;
+}
+
+.widthXSm {
+	width: 15%;
 }
 
 .leftAlign{
@@ -44,4 +80,12 @@ a {
 
 .rightAlign{
 	float: right;
+}
+
+.centerAlign {
+	align-items: center;
+}
+
+.clearFix{
+	overflow: auto;
 }
