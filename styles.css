@@ -1,69 +1,94 @@
 /* 
 
-This is a comment! This border was made by W3 Schools ! 
+This is a comment! This border was made courtesy of https://www.w3schools.com/css/css_border.asp! 
+
+The color palette is courtesy of coolors.co.
+
+The navbar is courtesy of https://www.w3schools.com/css/css_navbar.asp.s
 
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100..900;1,100..900&family=Idiqlat:wght@200;300;400&display=swap');
 
 body {
-	background-color: #2df0af;
+	background-color: #8895B3;
 }
 
 nav {
-	background-color: #74226c;
-	text-decoration-color: #ffffff;
-	border: 2px;
-	border-style: solid;
-	align-items: stretch;
+	position: sticky;
+  	top: 0;
+  	z-index: 1000;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul li {
-	float: left;
+	height: 50px;
+	background-color: #c12929;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	
 }
 
 ul li a {
-	display: block;
 	color: #ffffff;
-	text-align: center;
-	padding: 14px 16px;
+	text-align: justify;
+	padding: 15px 14px;
 	text-decoration: none;
+	display: block;
+	justify-content: left;
+}
+
+ul li a:hover {
+  background-color: #823329;
+}
+
+ul li a.active {
+  background-color: #FC7A57;
 }
 
 h1 {
 	text-align: center;
-	background-color: #cb904d;
+	background-color: #DBB26B;
 	font-family: 'Grenze', 'Times New Roman', Times, serif;
 	font-size: 3.50em;
 }
 
 h2 {
-	text-align: left;
+	text-align: center;
 	font-family: 'Grenze', 'Times New Roman', Times, serif;
 	font-size: 2.50em;
+	position: relative;
+	animation-name: myAnimation;
+  	animation-duration: 2s;
+  	animation-direction: reverse;
 }
 
 p {
-	font-family: 'Fjalla One', 'Times New Roman', serif;
-	font-size: 1.50em;
-	text-decoration-color: #6096ba;
+	font-family: 'Idiqlat', 'Times New Roman', serif;
+	font-size: 1em;
+	color: #4A5043;
 }
 
 a {
-	font-family: 'Fjalla One';
-	font-size: 1.0em;
+	font-family: 'Idiqlat';
+	font-size: 1em;
+}
+
+img {
+	border-radius: 10px;
 }
 
 .imgbord {
 	border: 5px;
 	border-style: dotted;
-	border-color: #42253b;
+	border-color: #941C2F;
 	border-radius: 10px;
+	margin-right: 10px !important;
+	margin-bottom: 5px !important;
 }
 
 .widthSm {
@@ -83,9 +108,45 @@ a {
 }
 
 .centerAlign {
-	align-items: center;
+	display: block;
+    margin: 0 auto;
 }
 
 .clearFix{
 	overflow: auto;
 }
+
+@keyframes myAnimation {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+@keyframes rotate {
+  from {left:0px; top:0px;}
+  to{left:0px; top:0px; transform:rotate(360deg);}
+}
+
+div {
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
+.div-reverse {
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+
+.rotate {
+  position: relative;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
