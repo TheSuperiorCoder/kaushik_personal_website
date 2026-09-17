@@ -1,12 +1,17 @@
+/* 
+The boilerplate keylistener script is courtesy of W3Schools: https://www.w3schools.com/js/js_events_keyboard.asp
+The async programming is courtesy of W3Schools: https://www.w3schools.com/js/js_asynchronous.asp
+DOM Maniupulation is courtesy of W3Schools: https://www.w3schools.com/js/js_htmldom.asp & https://www.w3schools.com/jsref/met_audio_play.asp
+*/
+
+
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const sound = new Audio("resources/scream.mp3");
 
-document.addEventListener('keydown', async (event) => {
-    
-    // ;   
+document.addEventListener('keydown', async (event) => { 
   if (event.key === '%') {
-    alert("Your browser is now cooked!");
-    for (let i = 0; i < 1000; i++) {
+    alert("You have found the easter egg!");
+    for (let i = 0; i < 100; i++) {
       sound.play()
       const img = document.createElement('img');
       img.src = 'resources/theImg.JPG';
@@ -23,8 +28,4 @@ document.addEventListener('keydown', async (event) => {
       await sleep(1); // 10ms between each
     }
   }
-});   
-
-element.addEventListener('animationend', () => {
-  element.classList.remove('animate-class');
 });   

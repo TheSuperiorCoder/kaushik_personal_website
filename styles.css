@@ -9,11 +9,25 @@ The navbar is courtesy of https://www.w3schools.com/css/css_navbar.asp.s
 */
 @import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100..900;1,100..900&family=Idiqlat:wght@200;300;400&display=swap');
 
+@keyframes blockMove {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+@keyframes rotate {
+  0%   { }
+  100% {transform: rotate(360deg);}
+}
+
 body {
-	background-color: #8895B3;
+	background-color: #B4BCCF;
+	position: relative;
 }
 
 nav {
+	overflow: hidden;
 	position: sticky;
   	top: 0;
   	z-index: 1000;
@@ -25,7 +39,7 @@ nav {
 
 ul {
 	height: 50px;
-	background-color: #c12929;
+	background-color: #A8D5E2;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -34,16 +48,16 @@ ul {
 }
 
 ul li a {
-	color: #ffffff;
+	color: #000000;
 	text-align: justify;
-	padding: 15px 14px;
+	padding: 12px;
 	text-decoration: none;
 	display: block;
 	justify-content: left;
 }
 
 ul li a:hover {
-  background-color: #823329;
+  background-color: #8AA39B;
 }
 
 ul li a.active {
@@ -52,29 +66,49 @@ ul li a.active {
 
 h1 {
 	text-align: center;
-	background-color: #DBB26B;
+	background-color: #153C51;
+	color: #FFFFFF;
 	font-family: 'Grenze', 'Times New Roman', Times, serif;
+	margin-right: 5px !important;
+	margin-left: 5px !important;
 	font-size: 3.50em;
+	border-style: solid;
+	border-color: #340c47;
+	border-radius: 10px;
+	position: relative;
 }
 
 h2 {
 	text-align: center;
+	background-color: #9dbc96;
 	font-family: 'Grenze', 'Times New Roman', Times, serif;
+	margin-right: 5px !important;
+	margin-left: 5px !important;
 	font-size: 2.50em;
+	border-style: solid;
+	border-color: #340c47;
+	overflow: auto;
 	position: relative;
-	animation-name: myAnimation;
-  	animation-duration: 2s;
-  	animation-direction: reverse;
+	border-radius: 10px;
 }
 
 p {
 	font-family: 'Idiqlat', 'Times New Roman', serif;
-	font-size: 1em;
+	background-color: #ddc0e0;
+	margin-right: 5px !important;
+	margin-left: 5px !important;
+	font-size: 1.125em;
 	color: #4A5043;
+	border: 3px;
+	border-style: solid;
+	border-color: #340c47;
+	border-radius: 10px;
+	padding: 3px !important;
+	overflow: auto;
 }
 
 a {
-	font-family: 'Idiqlat';
+	font-family: 'Idiqlat', 'Times New Roman', serif;
 	font-size: 1em;
 }
 
@@ -85,14 +119,19 @@ img {
 .imgbord {
 	border: 5px;
 	border-style: dotted;
-	border-color: #941C2F;
+	border-color: #991527;
 	border-radius: 10px;
-	margin-right: 10px !important;
+	margin-right: 5px !important;
+	margin-left: 5px !important;
 	margin-bottom: 5px !important;
 }
 
 .widthSm {
 	width: 30%;
+}
+
+.widthSSm {
+	width: 17%;
 }
 
 .widthXSm {
@@ -116,37 +155,31 @@ img {
 	overflow: auto;
 }
 
-@keyframes myAnimation {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {left:200px; top:0px;}
-  50%  {left:200px; top:200px;}
-  75%  {left:0px; top:200px;}
-  100% {left:0px; top:0px;}
+img {
+	position: relative;
+  	animation-name: rotate;
+  	animation-duration: 1s;
+  	animation-timing-function: ease-out;
 }
 
-@keyframes rotate {
-  from {left:0px; top:0px;}
-  to{left:0px; top:0px; transform:rotate(360deg);}
+.animateOneElement{
+	position: relative;
+  	animation-name: blockMove;
+  	animation-duration: 1s;
+  	animation-timing-function: ease-out;
 }
 
-div {
-  position: relative;
-  animation-name: myAnimation;
-  animation-duration: 2s;
-  animation-fill-mode: none;
+.animateOneElementReverse{
+	position: relative;
+  	animation-name: blockMove;
+  	animation-duration: 1s;
+	animation-direction: reverse;
+  	animation-timing-function: ease-out;
 }
 
-.div-reverse {
-  position: relative;
-  animation-name: myAnimation;
-  animation-duration: 2s;
-  animation-direction: reverse;
+.animateOneElementNoColor{
+	position: relative;
+  	animation-name: blockMoveNoColor;
+  	animation-duration: 1s;
+  	animation-timing-function: ease-out;
 }
-
-.rotate {
-  position: relative;
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-fill-mode: none;
-}
-
